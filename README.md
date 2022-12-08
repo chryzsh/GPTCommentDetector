@@ -18,6 +18,8 @@ Remember that the point is to detect comments obviously written completely by GP
 
 I know pretty much nothing about Javascript. This is shitty code largely written by ChatGPT itself, untested beyond Chrome on MacOS with Violenmonkey. I have no plans for maintenance or extending it. If you want features or support, you have to ask ChatGPT, not me.
 
+It's just sending a HTTP request to https://huggingface.co/openai-detector/ with the contents of a comment. This have some privacy, performance and data usage concerns. Additionally I am guessing that there is some rate limiting to using huggingface's service for free.
+
 # Install
 
 ## Prerequisites
