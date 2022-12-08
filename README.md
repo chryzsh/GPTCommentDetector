@@ -1,5 +1,4 @@
 # GPTCommentDetector
-==========================
 
 A UserScript to detect GPT generated comments on Hackernews.
 
@@ -26,7 +25,9 @@ ChatGPT, not me.
 
 ## Prerequisites
 
-Install **Tampermonkey** **（[Chrome](https://www.tampermonkey.net/)** / **[Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=zh-CN)）**
+Install **(Violentmonkey[https://violentmonkey.github.io/]**
+
+Alternative: Install **Tampermonkey** **（[Chrome](https://www.tampermonkey.net/)** / **[Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=zh-CN)）**
 
 
 ## UserScript
