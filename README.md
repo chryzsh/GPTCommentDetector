@@ -12,14 +12,11 @@ It puts every comment into the [GPT output detector](https://huggingface.co/open
 
 It only becomes reliable after about 50 tokens (one token is around 4 characters) so I mark the comments that are too short with gray and make no assessment on those.
 
-Remember that when using thisthe point is to detect comments obviously written completely by GPT, not detecting that a human a wrote it. You have to discern between the two, as the scale is not really utilized here. What I've found over the last few days of playing with this is that most AI generated text will almost always be identified with 99.97% probability , while human text ranges somewhere between 70-98. So I could move the threshold for my script quite a lot. I just wanted to see how it works with these thresholds for a while.
+Remember that the point is to detect comments obviously written completely by GPT, not detecting that a human a wrote it. You have to discern between the two, as the scale is not really utilized here. What I've found over the last few days of playing with this is that most AI generated text will almost always be identified with 99.97% probability , while human text ranges somewhere between 70-98. So I could move the threshold for my script quite a lot. I just wanted to see how it works with these thresholds for a while.
 
 # Disclaimer
 
-I know pretty much nothing about Javascript. This is shitty code largely
-written by ChatGPT itself, untested beyond Chrome on MacOS, and no plans for
-maintenance or extends. If you want features or support, you have to ask
-ChatGPT, not me.
+I know pretty much nothing about Javascript. This is shitty code largely written by ChatGPT itself, untested beyond Chrome on MacOS with Violenmonkey. I have no plans for maintenance or extending it. If you want features or support, you have to ask ChatGPT, not me.
 
 # Install
 
