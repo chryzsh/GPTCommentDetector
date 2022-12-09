@@ -19,7 +19,7 @@
 
 // Set a threshold for the minimum probability that a comment is AI-generated
 const AI_THRESHOLD = 0.99;
-const PROBABLE_THRESHOLD = 0.7;
+const PROBABLE_THRESHOLD = 0.9;
 const TOKEN_THRESHOLD = 200; //4 characters are about 50 tokens, which is when the detector model because reliable
 
 // put all comments into a NodeList
@@ -78,8 +78,8 @@ function addComment(result, comment) {
           comment.innerHTML += `<div style="color: red; font-weight: bold;">Definitely AI - AI probability ${formattedNumberAI}</div>`;
       }
        else {
-        comment.style.border = '1px solid yellow';
-        comment.innerHTML += `<div style="color: yellow; font-weight: bold;">Possibly AI - AI probability ${formattedNumberAI}</div>`;
+        comment.style.border = '1px solid orange';
+        comment.innerHTML += `<div style="color: orange; font-weight: bold;">Possibly AI - AI probability ${formattedNumberAI}</div>`;
       }
      }
 };
