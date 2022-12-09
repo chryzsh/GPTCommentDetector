@@ -24,9 +24,9 @@ It's just sending a HTTP request to https://huggingface.co/openai-detector/ with
 
 ## Prerequisites
 
-Install **(Violentmonkey[https://violentmonkey.github.io/]**
+Install **[Violentmonkey](https://violentmonkey.github.io/)**
 
-Alternative: Install **Tampermonkey** **（[Chrome](https://www.tampermonkey.net/)** / **[Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=zh-CN)）**
+Alternative: **Tampermonkey** **（[Chrome](https://www.tampermonkey.net/)** / **[Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=zh-CN)）**
 
 
 ## UserScript
@@ -37,5 +37,7 @@ Alternative: Install **Tampermonkey** **（[Chrome](https://www.tampermonkey.net
 
 # Example
 
-## Screenshot
+## Screenshots
+![Detected](https://github.com/chryzsh/GPTCommentDetector/raw/main/screenshot/screenshot3.png)
 ![Detected](https://github.com/chryzsh/GPTCommentDetector/raw/main/screenshot/screenshot2.png)
+****
