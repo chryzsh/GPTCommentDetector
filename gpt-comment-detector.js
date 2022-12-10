@@ -110,3 +110,4 @@ function detectAI(input, callback) {
   }
 });
 }
+
