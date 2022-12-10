@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Identify AI-generated comments on Hacker News
+// @name         GPT Comment Detector
 // @namespace    https://example.com/
 // @version      0.1
 // @description  Identify AI-generated comments on Hacker News
@@ -10,6 +10,7 @@
 // @grant         GM.xmlHttpRequest
 // @grant		unsafeWindow
 // @sandbox		JavaScript
+// @license MIT
 // ==/UserScript==
 
 // Set a threshold for the minimum probability that a comment is AI-generated

@@ -33,7 +33,7 @@ Alternative: **Tampermonkey** **（[Chrome](https://www.tampermonkey.net/)** / *
 
 | Greasyfork                                                                         | GitHub                                                                                       |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [Not published yet]() | [Github](https://github.com/chryzsh/GPTCommentDetector/raw/main/gpt-comment-detector.js)
+| [GreasyFork](https://greasyfork.org/en/scripts/456398-gpt-comment-detector) | [Github](https://github.com/chryzsh/GPTCommentDetector/raw/main/gpt-comment-detector.js)
 
 # Example
 
