@@ -19,37 +19,50 @@
 
 // Set a threshold for the minimum probability that a comment is AI-generated
 const AI_THRESHOLD = 0.99;
-const PROBABLE_THRESHOLD = 0.9;
+const PROBABLE_THRESHOLD = 0.7;
 const TOKEN_THRESHOLD = 200; //4 characters are about 50 tokens, which is when the detector model because reliable
 
 // put all comments into a NodeList
 const comments = document.querySelectorAll('.comment');
 //console.log(comments);
 
+// regex to remove whitespaces
+const whitespaceRegex = /\s+/g;
+
+//regex to remove "reply" at the end of comments
+const replyRegex = /\breply\b\s*/g;
+
 // loop over each comment, running the AI detection
 comments.forEach((comment) => {
-  var textLength = comment.textContent.length;
-  detectAI(comment.textContent, function(result) {
-      //console.log("result is:" + result);
-      //console.log("comment is: " + comment);
-    testLength(result, comment);
+    // add an onclick for each comment
+  comment.addEventListener('click', function() {
 
+  // trim commments for whitespaces and test length for each comment
+  testLength(comment);
     });
 });
 
 
-function testLength(result, comment) {
-    var textLength = comment.textContent.length;
+function testLength(comment) {
+  // trim whitespaces and shit from the end first - dont do this on the comment object itself, just a variable
+  var text = comment.textContent;
+  text = comment.textContent.trim();
+
+  text = comment.textContent.replace(whitespaceRegex, " ");
+  // remove "reply" from the end
+  text = comment.textContent.replace(replyRegex, "");
 
     // test the length first
-    if (comment.textContent.length < TOKEN_THRESHOLD) {
-      //console.log("not enough tokens for reliable data: " + textLength)
+    if (text.length < TOKEN_THRESHOLD) {
       comment.style.border = '1px solid gray';
       comment.innerHTML += `<div style="color: gray; font-weight: bold;">Insufficient data to assess if AI generated</div>`;
     }
     else {
       //console.log("enough data to assess: " + textLength);
-      addComment(result, comment);
+      detectAI(comment.textContent, function(result) {
+        addComment(result, comment);
+  });
+
     }
 }
 
@@ -78,8 +91,8 @@ function addComment(result, comment) {
           comment.innerHTML += `<div style="color: red; font-weight: bold;">Definitely AI - AI probability ${formattedNumberAI}</div>`;
       }
        else {
-        comment.style.border = '1px solid orange';
-        comment.innerHTML += `<div style="color: orange; font-weight: bold;">Possibly AI - AI probability ${formattedNumberAI}</div>`;
+        comment.style.border = '1px solid yellow';
+        comment.innerHTML += `<div style="color: yellow; font-weight: bold;">Possibly AI - AI probability ${formattedNumberAI}</div>`;
       }
      }
 };
@@ -110,5 +123,3 @@ function detectAI(input, callback) {
   }
 });
 }
-
-
